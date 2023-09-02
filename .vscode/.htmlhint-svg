@@ -1,0 +1,3 @@
+{
+    "ignore-linting"; ["htmlhint-disable", "htmlhint-enable"]
+}

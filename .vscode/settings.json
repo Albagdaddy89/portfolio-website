@@ -1,0 +1,11 @@
+{
+    "htmlhint.options": {
+      "htmlhintrc": "${Exercise1.3}/.htmlhintrc"
+    },
+    "[svgfile.html]": {
+      "htmlhint.options": {
+        "htmlhintrc": "${Exercise1.3}/.htmlhint-svg"
+      }
+    }
+  }
+  
