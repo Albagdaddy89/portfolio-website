@@ -257,10 +257,3 @@ button:focus,
   height: 10%;
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  text-align: center;
-}
