@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #357b70;
+  --primary-color: #3f357b;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
   
@@ -9,21 +9,47 @@
 
   --background-color: #f2f2f2;
   --text-color: #333;
-  --accent-color: #a81188;
-  --link-visited-color: #bd0c6d83;
-  --link-hover-color: #b92930;
-  --active-link-color: #9c489c;
+  --accent-color: #111ba8;
+  --link-visited-color: #670cbd83;
+  --link-hover-color: #293fb9;
+  --active-link-color: #48509c;
   --button-bg-color: #357b70;
-  --button-hover-bg-color: #b92930;
+  --button-hover-bg-color: #292bb9;
   --header-bg-color: #333;
-  --header-text-color: #fff;
+  --header-text-color: #ffffff;
   --grid-item-bg-color: lightgray;
 }
+
+/* Style for the navigation links */
+.navigation-list__item a {
+  text-decoration: none; /* Remove underline by default */
+  color: var(--accent-color); /* Use the --accent-color variable */
+  transition: color 0.2s, text-decoration 0.2s; /* Add transitions for color and text-decoration */
+}
+
+.navigation-list__item a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: var(--link-hover-color); /* Use the --link-hover-color variable on hover */
+}
+
+.navigation-list__item a:active {
+  color: var(--active-link-color);
+}
+
+.navigation-list__item a:visited {
+  color: var(--link-visited-color); /* Use the --link-visited-color variable for visited links */
+}
+
+
+/* ... Rest of your CSS ... */
 
 body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -87,17 +113,34 @@ button:focus,
   opacity: 0.8;
 }
 
+/* Style for the portrait image */
 .profile_portrait {
-  display: flex;
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-  border-radius: 50%;
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make the image circular if needed */
+  margin-bottom: 20px; /* Add spacing between portrait and text */
 }
 
+/* Style for the main content */
 .profile {
-  max-width: 700px;
-  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text within the container */
+  /* Your main content styles here */
+}
+
+/* Additional styles for text elements */
+.profile h1, .profile p {
+  margin: 10px 0; /* Add spacing between text elements */
+}
+
+/* Style for the "Check out some of my code" link */
+.profile a {
+  text-decoration: none;
+  color: #007bff; /* Customize link color */
 }
 
 * {
@@ -113,8 +156,10 @@ button:focus,
 
 .page-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px, 20px;
 }
 
 .page-header__item {
@@ -204,4 +249,18 @@ button:focus,
   width: 100px;
   height: 75px;
   animation: moveAndRotateAnimation 5s linear infinite;
+}
+
+/* Style for the logo */ reduce height and width of logo
+.logo img {
+  width: 10%;
+  height: 10%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: center;
 }
